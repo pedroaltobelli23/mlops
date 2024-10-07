@@ -8,6 +8,8 @@ import boto3
 import os
 from dotenv import load_dotenv
 
+load_dotenv()
+
 class Person(BaseModel):
     age: int
     job: str
@@ -51,6 +53,8 @@ ml_models = {}
 
 @app.on_event("startup")
 async def startup_event():
+    print("AAAAA")
+    print(os.getenv("AWS_ACCESS_KEY_ID"))
     s3 = boto3.client(
         "s3",
         aws_access_key_id=os.getenv("AWS_ACCESS_KEY_ID"),
@@ -72,8 +76,9 @@ async def predict(
 ):
     ohe = ml_models["ohe"]
     model = ml_models["model"]
-
-    person_t = ohe.transform(pd.DataFrame([person.dict()]))
+    print(person.model_dump())
+    print(ohe)
+    person_t = ohe.transform(pd.DataFrame([person.model_dump()]))
     pred = model.predict(person_t)[0]
 
     return {
