@@ -35,7 +35,7 @@ python3 models_to_s3.py
 
 This command will return the repository URI which is necessary for the next steps
 4. Export the Uri:
-```
+```bash
 export URI="ECR repository URI"
 ```
 
