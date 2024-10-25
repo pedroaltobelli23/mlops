@@ -1,6 +1,8 @@
 # APS3
 Pedro Altobelli
 
+APS: Implementation of an API endpoint that makes predictions. AWS S3, Lambda and API Gateway will be used
+
 How to run:
 
 1. Install dependencies (python 3.10.15):

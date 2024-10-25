@@ -1,5 +1,5 @@
 # mlops-API-class-02
-APi from class 02 
+API from class 02 
 
 How to run:
 

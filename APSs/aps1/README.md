@@ -4,6 +4,8 @@
 
 MLOps &amp; Interviews - APS01
 
+APS: Training and using for prediction a simple Machine Learning model 
+
 Run the files in order to make the preprocessing, training and prediction.
 
 process.py
